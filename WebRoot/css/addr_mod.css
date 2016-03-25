@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/* 地址切换css */
+.addr_mod_bg{
+	display:block;
+	height:450px;
+	margin-top:20px;
+}
+
+.row_col{
+	font-size:16px;
+}
+
+.container .row .row_ad{
+	margin-top:50px;
+}
+.container .row .row_logo .col-md-offset-8{
+	margin-top:10px;
+}
+.container .row .row_search .row_search_all #addr_searchbar{
+	width:100px;
+	height:40px;
+}
+.container .row .row_search{
+	margin-top:150px;
+	font-size:18px;
+}
+.container .row .row_search #addr_searchbtn{
+	width:360px;
+	height:40px;
+}
+.container .row .row_search .row_search_all .btn-success{
+	width:100px;
+	height:40px;
+	font-size:18px;
+	margin-top:-4px;
+	margin-bottom:auto;
+}

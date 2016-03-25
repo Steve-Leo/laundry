@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/* 自动轮播 */
+.wrap{overflow:visible;}
+.wrap_in{overflow:visible;}
+.banner{ background:#F6F6F6; padding-top:40px; overflow:hidden;}
+.lunz {width:1200px; height:450px; margin:0 auto; position:relative;}
+.lunz .images{position:relative; top:-10px;}
+.lunz .images ul li {position: absolute; z-index:6; border-radius:5px; overflow:hidden; box-shadow: 0 4px 6px #ccc;}
+.lunz .images ul li img {width: 100%; height: 100%;}
+.lunz .images ul li.no0 { z-index: 1; width: 725px; height: 321px; top: 50px; left: 0px;}
+.lunz .images ul li.no1 { z-index: 2; width: 874px; height: 382px; top: 20px; left: 100px;}
+.lunz .images ul li.no2 { z-index: 1; width: 725px; height: 321px; top: 50px; left: 476px;}
+.lunz .images ul li.no3 { z-index: 0; width: 874px; height: 382px;	top: 20px;	left: 100px;}/*  opacity:0; filter:alpha(opacity=0); */
+.lunz .images ul li.no4 {display:none;}
+.lunz .btnbox{z-index:7;}
+.lunz .btnbox a{display: block; width:50px; height:40px; position: absolute; cursor: pointer; z-index: 10; overflow:hidden;}
+.lunz .btnbox .leftbut{left:115px; bottom:72px; background:url("../image/icon.png") no-repeat -4px -32px;}
+.lunz .btnbox .leftbut:hover{ background-position:-4px -133px;}
+.lunz .btnbox .rightbut{right:225px; bottom:72px; background:url("../image/icon.png") no-repeat -4px -81px;}
+.lunz .btnbox .rightbut:hover{ background-position:-4px -190px;}
+
+.dotlz {position: absolute; width:150px; bottom:28px; left:40%; margin-left:-75px; z-index: 15; overflow:hidden; }
+.dotlz ul {width:450px;}
+.dotlz ul li { float: left; width:12px; height:12px; display:block; cursor: pointer; margin: 0 9px; background:#ddd; border-radius:50%;}
+.dotlz ul li.cur {background:#bbb; }
+
+/* 工具栏 */
+.container .loc .loc_d{
+	float:left;
+	margin:20px auto;
+}
+.container .loc .loc_s{
+	float:right;
+	margin:20px auto;
+}
+.container .loc .loc_s .input-group{
+	width:300px;
+	margin-top:-5px;
+}
+
+.container .toolbar{
+	position:absolute;
+	width:1070px;
+	margin-top:80px;
+}
+
+.container .shops{
+	position:relative;
+	width:1070px;
+	margin-top:160px;
+    min-height:120px;
+    *+height:100%;
+    _height:120px;
+}
+
+.col-md-3{
+	 padding-bottom:15px;
+}
+
+/* 店铺展示 */
+.container .shops .row{
+	margin-left:0 auto;
+	height:270px;
+	position:absolute;
+	width:1070px;
+}
+.container .shops .s_shop{
+	height:240px;
+	display:block;
+	background-size:100% 100%;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+}

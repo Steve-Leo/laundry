@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 配置用户package -->
+	<package name="user" namespace="/user" extends="json-default">
+		<action name="toRegister" class="com.ruanku.web.ToRegisterAction">
+			<result name="register" type="dispatcher">/user/register.jsp</result>
+		</action>
+		<action name="register" class="com.ruanku.web.RegisterAction">
+			<result name="register" type="dispatcher">/user/register.jsp</result>
+			<result name="login" type="redirectAction">toLogin.action</result>
+			<result name="error" type="redirectAction">toError.action</result>
+		</action>
+		<action name="toLogin" class="com.ruanku.web.ToLoginAction">
+			<result name="login" type="dispatcher">/user/login.jsp</result>
+		</action>
+		<action name="toError" class="com.ruanku.web.ToErrorAction">
+			<result name="error" type="dispatcher">/error.jsp</result>
+		</action>
+		<action name="verify" class="com.ruanku.web.ToVerifyAction">
+			<result name="error" type="dispatcher">/error.jsp</result>
+			<result name="login" type="redirectAction">toLogin.action</result>
+		</action>
+		<action name="login" class="com.ruanku.web.LoginAction">
+			<result name="to_user_center" type="redirectAction">toUserCenter.action
+			</result>
+			<result name="login" type="dispatcher">/user/login.jsp</result>
+			<result name="error" type="redirectAction">toError.action</result>
+		</action>
+		
+		<action name="toUserCenter" class="com.ruanku.web.ToUserCenterAction">
+			<result name="user_center" type="dispatcher">/user/user_center.jsp</result>
+			<result name="login" type="redirectAction">toLogin.action</result>
+		</action>
+
+		<action name="UserManage" class="com.ruanku.web.UserManageAction">
+
+			<result name="transactionRecord" type="dispatcher">/user/account_detail.jsp</result>
+
+			<result name="login" type="redirectAction">toLogin.action</result>
+			<result name="error" type="dispatcher">/error.jsp</result>
+			<result name="my_order" type="dispatcher">/user/orders.jsp</result>
+			<result name="order_content" type="dispatcher">/user/order_content.jsp</result>
+			<result name="json" type="json">
+				<param name="excludeNullProperties">true</param>
+			</result>
+			<result name="payorder" type="dispatcher">/user/payorder.jsp</result>
+			<result name="evaluate" type="dispatcher">/user/evaluate.jsp</result>
+			<result name="mybasket" type="dispatcher">/user/trolley.jsp</result>
+			<result name="order_confirm" type="dispatcher">/user/order_confirm.jsp</result>
+		</action>
+		<action name="forgot" class="com.ruanku.web.ForgotPassword">
+			<result name="remain" type="dispatcher">/user/forget_pass.jsp</result>
+		</action>
+		<action name="reset" class="com.ruanku.web.ToResetAction">
+			<result name="error" type="dispatcher">/error.jsp</result>
+			<result name="newpwd" type="dispatcher">/user/newpwd.jsp</result>
+		</action>
+		<action name="toIndex" class="com.ruanku.web.ToIndexAction">
+				<result name="index" type="dispatcher">/index.jsp</result>
+			</action>
+			<action name="logout" class="com.ruanku.web.LogoutAction">
+				<result name="index" type="redirectAction">toIndex.action</result>
+			</action>
+	</package>
+
+	<package name="manager" extends="json-default" namespace="/manager">		
+
+		<action name="manager" class="com.ruanku.web.ManagerAction">
+			<result name="adminLogin" type="dispatcher">/admin/login.jsp</result>
+			<result name="error" type="redirectAction">toError.action</result>
+			<result name="adminIndex" type="dispatcher">/admin/admin.jsp</result>
+			<result name="result" type="json">
+			     <param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+	</package>
+
+
+
+	<package name="map" extends="json-default" namespace="/map">
+	   <action name="map" class="com.ruanku.web.MapAction">
+            <result name="result" type="json">
+                 <param name="excludeNullProperties">true</param>
+            </result>
+	   </action>
+	</package>   
+	
+
+	<package name="shop" namespace="/shop" extends="json-default">
+
+		<action name="shop" class="com.ruanku.web.ShopAction">
+
+			<result name="tologin" type="redirectAction">shop!toLogin.action</result>
+			<result name="login" type="dispatcher">shoplogin.jsp</result>
+			<result name="toregister" type="redirectAction">shop!toRegister.action</result>
+			<result name="register" type="dispatcher">shopregister.jsp</result>
+			<result name="toShopIndex" type="redirectAction">shop!toShopIndex.action</result>
+			<result name="shopIndex" type="dispatcher">shop_center.jsp</result>
+			<result name="error" type="redirectAction">toError.action</result>
+			<result name="workerlist" type="dispatcher">workers.jsp</result>
+			<result name="shopOrderList" type="dispatcher">order_shop.jsp</result>
+			<result name="clothesList" type="dispatcher">clothes_info.jsp</result>
+			<result name="shop" type="json">
+                 <param name="excludeNullProperties">true</param>
+            </result>
+			<result name="toindex" type="dispatcher">/index.jsp</result>
+			<result name="statistics" type="dispatcher">data.jsp</result>
+		</action>
+
+	</package>
+	
+	<package name="jfreechart" extends="jfreechart-default" >
+		<action name="linechart" class="com.ruanku.web.ShopStatisticsReport">
+			<result name="success" type="chart">
+			   <param name="value">chart</param>
+			   <param name="type">png</param>
+			   <param name="width">700</param>
+			   <param name="height">500</param>
+			 </result>
+		</action>
+	</package>
+
+</struts>

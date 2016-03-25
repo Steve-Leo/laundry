@@ -1,0 +1,48 @@
+.center-block{
+	width:115px;
+}
+
+.toolbar{
+	background:#eee;
+	height:50px;
+}
+
+.controlbar{
+	float:left;
+	width:450px;
+	height:50px;
+	line-height:50px;
+	padding-left:10px;
+}
+
+.controlbar a{
+	padding-left:10px;
+}
+
+.controlbar p{
+	float:right;
+}
+
+.accountbar{
+	float:right;
+	padding-left:20px;
+	height:50px;
+}
+
+.accountbar p{
+	float:left;
+	height:48px;
+	line-height:50px;
+	padding-right:20px;
+}
+
+.accountbar a{
+	float:left;
+	height:50px;
+	width:120px;
+	font-size:20px;
+	display:inline-block;
+	line-height:37px;
+	background:#eee;
+	border-radius: 2px;
+}

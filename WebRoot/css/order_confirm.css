@@ -1,0 +1,67 @@
+.addr_back{
+	background:#eee;
+	height:50px;
+	border:1px solid #eee;
+	border-radius: 2px;
+	padding-top:7px;
+}
+
+.submit_block{
+	min-height:250px;
+	width:400px;
+	float:right;
+	margin-top:35px;
+}
+
+.addr_info_block{
+	min-height:100px;
+	float:right;
+	width:400px;
+	margin-top:10px;
+	border:2px solid #337ab7;
+}
+
+.account_block{
+	min-height:45px;
+	padding-right:10px;
+	padding-top:2px;
+	margin:0 0 10;
+}
+
+.account_block p{
+	float:right;
+}
+
+.account_block strong{
+	font-size:30
+}
+
+.addr_block{
+	min-height:40px;
+	width:380px;
+	margin:0 10 10 5;
+}
+
+.addr_block div{
+	min-height:20px;
+	width:380px;
+	float:right;
+	text-align:right;
+}
+
+.submit_button_block{
+	height:40px;
+	float:right;
+	width:400px;
+}
+
+.submit_button_block a{
+	float:right;
+	height:40px;
+	width:120px;
+	font-size:20px;
+	display:inline-block;
+	line-height:25px;
+	background:#337ab7;
+	border-radius: 0px;
+}

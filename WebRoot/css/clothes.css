@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.container .clothes{
+	margin-top:100px;
+	padding-left:20px;
+}
+.container .clothes .clothes_info{
+	height:440px;
+}
+
+.container .clothes #clothes_num{
+	width:40px;
+}
+.container .clothes p{
+	font-size:18px;
+	font-family:"微软雅黑","宋体",Aril;
+}
+
+.container .clothes .clothes_pic{
+	background:url("../image/shortTr.jpg") no-repeat;
+	background-size:100% 100%;
+	display:block;
+	height:400px;
+	border:2px solid gray;
+}
+.container .clothes #clothes_info_t{
+	margin-top:20px;
+	margin-left:20px;
+	height:300px;
+}
+.container .clothes .btns{
+	position:relative;
+	margin-bottom:20px;
+	margin-left:20px;
+	top:45px;
+}
+.container .clothes .btns .btn-primary{
+	margin-left:20px;
+}

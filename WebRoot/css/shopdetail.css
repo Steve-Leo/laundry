@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/* 店铺信息 */
+.container .shop_dt{
+	margin-top:80px;
+}
+#comment{
+	max-width :  420px;
+    max-height :  80px;
+    overflow:auto;
+    border:0px;
+    resize:none;
+}
+.container .shop_dt .row{
+	padding-left:15px ;
+}
+.container .shop_dt .shop_pic{
+	height:250px;
+	display:block;
+	background:url("../image/shortTr.jpg") no-repeat;
+	background-size:100% 100%;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:25px;
+}
+.container .shop_dt .shop_info{
+	margin-left:50px;
+	height:250px;
+	font-family:"微软雅黑","宋体",Aril;
+	font-size:16px;
+	width:500px;
+}
+
+/* 工具条 */
+.container .toolbar{
+	margin-top:25px;
+	margin-bottom:25px;
+}
+
+.container .toolbar .input-group{
+	padding-right:20px;
+	padding-top:8px;
+	width:300px;
+}
+/* 商品展示 */
+.container .shop_gs .gs_infos{
+	height:250px;
+	display:block;
+}
+.container .shop_gs .row .shoppingcart{
+	height:20px;
+	display:block;
+	background:url("../image/icon_shoppingcart.png") no-repeat;
+	background-size:100% 100%;
+}
+.container .shop_gs .gs_infos .shop_gs_p{
+	height:220px;
+	display:block;
+	background:url("../image/shortTr.jpg") no-repeat;
+	background-size:100% 100%;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+}
+.container .shop_gs .col-md-3 .shop_gs_p1{
+	height:220px;
+	display:block;
+	background:url("../image/shortTr.jpg") no-repeat;
+	background-size:100% 100%;
+}
+.container .shop_gs .row2{
+	margin-top:25px;
+}
+.container .shop_gs .gs_infos .gs_price{
+	padding-top:7px;
+}
+
+/* 分页导航 */
+.container .s_pages{
+	padding-left:40%;
+}
